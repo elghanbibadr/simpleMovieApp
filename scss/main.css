@@ -21,16 +21,25 @@ main {
 }
 
 .movie {
-  height: 500px;
+  height: 400px;
+  border-radius: 10px;
   margin: 1rem;
   background-color: #292946;
-  width: 300px;
+  width: 250px;
   -webkit-box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
           box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
-  border: 1px solid #eee;
   cursor: pointer;
   position: relative;
   color: white;
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+
+.movie:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .movie img {
@@ -39,7 +48,7 @@ main {
 }
 
 .movie h2 {
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   font-weight: 500;
   max-width: 80%;
   margin-left: 10px;
@@ -47,7 +56,7 @@ main {
 
 .movie span {
   position: absolute;
-  bottom: 1.2rem;
+  bottom: 14px;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -58,7 +67,7 @@ main {
   font-weight: bold;
   width: 40px;
   background-color: #1d1f32;
-  right: 10px;
+  right: 5px;
 }
 
 .movie .mediumVote {
